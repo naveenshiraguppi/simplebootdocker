@@ -1,0 +1,1 @@
+GET hello curl --location 'http://localhost:8090/api/tryout/hello'

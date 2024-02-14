@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  simplebootdocker:
+    platform: linux/arm64/v8
+    container_name: naveendocker.simplebootdocker
+    image: simplebootdocker:1.0.0
+    build: .
+    ports:
+    #	springboot app defaults to 8080 that is application.properties server.port=8080
+    # 	to have different physical port should point to docker port of 8080 
+      - 8090:8080
+volumes:
+  pgdata: {}
